@@ -1,29 +1,31 @@
 /**
- * Every word on the site lives here. Sections read from this file so the copy
- * can be rewritten without touching a single layout or motion decision.
+ * Product relaunch copy for MKTG 1101.
+ * The same template and motion system are preserved, but the wine story has
+ * been repositioned around the Google Pen Red and its new target customer.
  */
 
+export const productUrl =
+  'https://shop.merch.google/product/google-pen-red-gmssgoar100899?itemListName=Search';
+
 export const brand = {
-  name: 'Nocturne',
-  sub: 'Estate & Cellars',
-  founded: 'MCMVIII',
-  cta: 'Reserve a case',
-  nav: ['The Wine', 'The Estate', 'Cellar Door', 'Allocation', 'Journal'],
+  name: 'Google',
+  sub: 'Pen Red',
+  founded: 'WORK. CREATE. REPRESENT.',
+  cta: 'Shop the pen',
+  nav: ['The Pen', 'Why It Works', 'At Work', 'Benefits', 'Shop'],
 } as const;
 
 export const hero = {
-  // Two short lines on purpose. Every line is fitted to the panel, so fewer
-  // characters means a bigger face — which is where the reference gets its
-  // weight from.
-  giant: ['Cabernet', 'Sauvignon'],
-  cue: 'Scroll to decant',
+  giant: ['Google', 'Pen Red'],
+  cue: 'Scroll to discover',
 } as const;
 
 export const wine = {
-  eyebrow: 'Single vineyard, Block ix',
-  headline: ['Reserve', 'MMXVIII'],
-  body: 'Nocturne Reserve comes off two and a half hectares of forty-year-old vines on the cool eastern slope of Block IX, picked in three passes across nine nights in March. Fermented on native yeast in open oak, basket-pressed, then left alone for twenty-two months in French barrique — a third of it new. Unfined, unfiltered, bottled by gravity.',
-  action: 'Add to cellar',
+  eyebrow: 'A small detail. A stronger brand.',
+  headline: ['Sign With', 'Google'],
+  body:
+    'The Google Pen Red turns an everyday writing tool into a simple expression of professional identity. Designed for Google employees, technology professionals, and dedicated Google fans, it brings the brand into meetings, notes, presentations, and important decisions.',
+  action: 'Get yours',
 } as const;
 
 export type Spec = {
@@ -35,33 +37,34 @@ export type Spec = {
 
 export const specs: Spec[] = [
   {
-    key: 'ABV',
-    label: 'Alcohol by volume',
-    value: '14.5%',
-    note: 'Warm but composed. The fruit carries the alcohol rather than the other way round.',
+    key: 'PRICE',
+    label: 'Google Merchandise Store',
+    value: '$2',
+    note: 'An affordable way to bring Google branding into your everyday professional routine.',
   },
   {
-    key: 'OAK',
-    label: 'Months in French barrique',
-    value: '22',
-    note: 'One third new Allier, the rest second and third fill. Coopered in Burgundy, toasted long and low.',
+    key: 'TIP',
+    label: 'Fine-point gel tip',
+    value: 'FINE',
+    note: 'Smooth, precise writing for meeting notes, signatures, and everyday work.',
   },
   {
-    key: 'PH',
-    label: 'Total acidity 5.9 g/L',
-    value: '3.62',
-    note: 'Cold nights hold the line. This is a wine built to sit in a dark room for a decade.',
+    key: 'INK',
+    label: 'Google Pen Red',
+    value: 'RED',
+    note: 'A bold red finish, Google branding, and red ink make it instantly recognizable.',
   },
 ];
 
 export const finish = {
-  giant: 'Long Finish',
-  videoCaption: ['Hear it from our winemaker,', 'Élise Marchand'],
-  lead: 'Dense and unhurried. It opens on black fruit — cassis, damson, the skin of a bruised plum — then turns savoury: graphite, dried bay, the inside of a cigar box. The tannin is fine-grained and arrives late, drawing the finish out well past a minute.',
-  styleHeading: 'Style',
+  giant: 'Make Your Mark',
+  videoCaption: ['Built for the workplace,', 'branded for Google.'],
+  lead:
+    'From quick ideas to major agreements, the tools professionals use become part of how they present themselves. The Google Pen Red gives employees and Google enthusiasts a simple way to keep the brand visible in everyday work.',
+  styleHeading: 'Professional Identity',
   styleBody: [
-    'In the old classification this would sit somewhere between claret and cult — too structured to drink young, too generous to keep waiting on. We make nine hundred cases and we do not make more.',
-    'Serve at sixteen degrees, in a glass with room to breathe. Decant an hour ahead. Open the second bottle before you finish the first.',
+    'A pen may be a small product, but it appears in meetings, presentations, conferences, workspaces, and conversations every day. That makes it a natural opportunity for brand representation.',
+    'Instead of positioning the Google Pen Red as ordinary merchandise, this relaunch presents it as a professional workplace accessory for people who are proud to represent Google and the technology industry.',
   ],
 } as const;
 
@@ -74,21 +77,21 @@ export type Note = {
 
 export const notes: Note[] = [
   {
-    title: 'Blackcurrant',
-    body: 'Cassis and damson skin, picked at the last possible moment before the acid drops away.',
+    title: 'Brand Pride',
+    body: 'Represent Google through an item you can actually use throughout the workday.',
+    glyph: 'G',
+    tone: 'wine',
+  },
+  {
+    title: 'Everyday Utility',
+    body: 'Useful for meetings, planning, note-taking, presentations, and signatures.',
     glyph: '✦',
     tone: 'wine',
   },
   {
-    title: 'Violet — Iris',
-    body: 'A floral top note that only shows up twenty minutes into the glass. Wait for it.',
-    glyph: '❈',
-    tone: 'wine',
-  },
-  {
-    title: 'Cedar — Clove',
-    body: 'Twenty-two months in Allier oak. Cigar box, dried bay, a thread of sweet spice underneath it all.',
-    glyph: '❖',
+    title: 'Professional Detail',
+    body: 'A recognizable branded accessory that adds personality to a desk and professional routine.',
+    glyph: '✓',
     tone: 'ink',
   },
 ];
@@ -97,50 +100,50 @@ export type Format = {
   id: string;
   caption: string;
   detail: string;
-  /** The live 3D bottle docks into this slot instead of loading an image. */
   live?: boolean;
   src?: string;
-  /** Height as a fraction of the lineup row, so the family scales together. */
   h: number;
 };
 
 export const allocation = {
-  eyebrow: 'Allocation:',
-  giant: 'Nine Hundred',
-  giantSub: 'Cases',
+  eyebrow: 'Made for:',
+  giant: 'Everyday',
+  giantSub: 'Google',
   formats: [
-    { id: 'crate', caption: 'Original wood', detail: 'Twelve', src: '/img/format-crate.png', h: 0.52 },
-    { id: 'magnum', caption: '1.5L magnum', detail: 'Forty made', src: '/img/format-magnum.png', h: 0.98 },
-    { id: 'bottle', caption: '750ml', detail: 'The release', live: true, h: 0.82 },
-    { id: 'half', caption: '375ml half', detail: 'Cellar door only', src: '/img/format-half.png', h: 0.6 },
-    { id: 'case', caption: 'Six-bottle case', detail: 'Sealed', src: '/img/format-case.png', h: 0.46 },
+    {id: 'meeting', caption: 'Meetings', detail: 'Take notes', src: '/img/google-pen-red.svg', h: 0.9},
+    {id: 'desk', caption: 'Your desk', detail: 'Show your brand', src: '/img/google-pen-red.svg', h: 0.82},
+    {id: 'signature', caption: 'Signatures', detail: 'Make your mark', src: '/img/google-pen-red.svg', h: 0.96},
+    {id: 'conference', caption: 'Conferences', detail: 'Represent Google', src: '/img/google-pen-red.svg', h: 0.84},
+    {id: 'ideas', caption: 'Big ideas', detail: 'Write them down', src: '/img/google-pen-red.svg', h: 0.88},
   ] as Format[],
 } as const;
 
 export const pairings = {
-  eyebrow: 'At the table',
-  headline: ['Wine speaks.', 'Tables listen.'],
-  body: 'It wants fat and salt and time. Rib of beef over coals, bone marrow on burnt toast, a hard sheep cheese at the end of the night. Skip anything delicate — this wine will simply talk over it.',
-  action: 'See the pairings',
+  eyebrow: 'More than merchandise',
+  headline: ['Put Google', 'In Your Hand'],
+  body:
+    'Google employees and technology professionals already represent the brand through the work they do. The Google Pen Red extends that identity to an everyday object — making it ideal for the office, meetings, events, and professional conversations.',
+  action: 'Shop Google Pen Red',
 } as const;
 
 export const estate = {
-  eyebrow: 'The estate',
-  headline: ['Nine nights', 'of picking'],
-  body: 'Block IX sits four hundred metres up, facing east, on a seam of decomposed granite thin enough to keep the vines honest. Everything is picked at night and in the dark, into small crates, by the same twenty people who have done it for eleven years.',
+  eyebrow: 'For people who build the future',
+  headline: ['Think Bold.', 'Write Google.'],
+  body:
+    'Designed for employees, technology professionals, and dedicated Google fans who value innovation, recognizable design, and the opportunity to represent the brands they believe in.',
 } as const;
 
 export const footer = {
   columns: [
-    { title: 'Visit', links: ['Cellar door', 'Tastings', 'The long table', 'Find us'] },
-    { title: 'Buy', links: ['Allocation list', 'Trade enquiries', 'Stockists', 'Gift a case'] },
-    { title: 'Read', links: ['Journal', 'Vintage notes', 'Press', 'Our practice'] },
+    {title: 'Product', links: ['Google Pen Red', 'Fine-point gel tip', 'Soft-touch finish', 'Red ink']},
+    {title: 'Use It', links: ['Meetings', 'Signatures', 'Notes', 'Conferences']},
+    {title: 'Google', links: ['Brand pride', 'Professional identity', 'Technology', 'Merchandise Store']},
   ],
   newsletter: {
-    title: 'The allocation list',
-    body: 'One letter a year, sent the week the wine is released. Nothing else, ever.',
+    title: 'Make your mark',
+    body: 'Bring Google branding into your everyday work with a simple professional accessory.',
     placeholder: 'Your email',
-    action: 'Join',
+    action: 'Stay connected',
   },
-  legal: 'Please enjoy responsibly. You must be of legal drinking age in your country to purchase.',
+  legal: 'Google Pen Red promotional concept created for a Fairfield University marketing course project.',
 } as const;
