@@ -1,4 +1,4 @@
-import {Suspense, lazy, useCallback, useEffect, useLayoutEffect, useState} from 'react';
+import {useCallback, useEffect, useLayoutEffect, useState} from 'react';
 import {Chrome} from './components/Chrome';
 import {Frame} from './components/Frame';
 import {Preloader} from './components/Preloader';
@@ -13,21 +13,12 @@ import {Wine} from './components/sections/Wine';
 import {useReducedMotion} from './hooks/useReducedMotion';
 import {useRevealSystem} from './hooks/useReveal';
 import {probeTextures} from './lib/assets';
-import {loadModel} from './lib/model';
 import {initPointer} from './lib/pointer';
 import {ScrollTrigger, initMotion} from './lib/scroll';
-
-/**
- * three and drei are the bulk of the bundle, so the 3D stage is split out.
- * The frame, the type and the preloader paint from the small entry chunk while
- * it downloads alongside the model.
- */
-const Stage = lazy(() => import('./components/Stage'));
 
 export default function App() {
   const reduced = useReducedMotion();
   const [entered, setEntered] = useState(false);
-  const [modelUrl, setModelUrl] = useState<string | null>(null);
 
   useLayoutEffect(() => {
     probeTextures();
@@ -36,20 +27,8 @@ export default function App() {
 
   useLayoutEffect(() => initMotion(reduced), [reduced]);
 
-  useEffect(() => {
-    let live = true;
-    loadModel().then((url) => {
-      if (live) setModelUrl(url);
-    });
-    return () => {
-      live = false;
-    };
-  }, []);
-
   useRevealSystem(entered);
 
-  // Type and photography both change how tall the page is. Re-measure once
-  // they have settled, or every trigger is anchored to the wrong pixel.
   useEffect(() => {
     if (!entered) return;
     const refresh = () => ScrollTrigger.refresh();
@@ -67,13 +46,6 @@ export default function App() {
   return (
     <>
       <Frame />
-
-      {modelUrl && (
-        <Suspense fallback={null}>
-          <Stage url={modelUrl} visible={entered} />
-        </Suspense>
-      )}
-
       <Chrome />
 
       <main id="top">
@@ -87,7 +59,6 @@ export default function App() {
       </main>
 
       <Footer />
-
       <Preloader onDone={onDone} />
     </>
   );
