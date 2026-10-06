@@ -1,5 +1,5 @@
 import {useRef} from 'react';
-import {pairings} from '../../lib/content';
+import {pairings, productUrl} from '../../lib/content';
 import {useParallax} from '../../hooks/useReveal';
 import {Figure} from '../Figure';
 import {Lines, Section} from '../Section';
@@ -13,10 +13,12 @@ export function Pairings() {
       <div className="grid w-full grid-cols-1 items-center gap-[clamp(24px,4vw,70px)] lg:grid-cols-12">
         <div ref={photo} className="lg:col-span-6">
           <Figure
-            src="/img/pairing.jpg"
-            alt="Rib of beef, bone marrow butter and a glass of Nocturne Reserve"
-            hint="Table, overhead"
-            className="aspect-[3/2] w-full"
+            src="/img/google-pen-red.svg"
+            alt="Google Pen Red"
+            hint="Google Pen Red"
+            fit="contain"
+            shadow
+            className="mx-auto aspect-[4/3] w-full max-w-[520px]"
           />
         </div>
 
@@ -34,9 +36,15 @@ export function Pairings() {
             {pairings.body}
           </p>
 
-          <button data-reveal type="button" className="btn-ink mt-[clamp(18px,2.2vw,32px)]">
+          <a
+            data-reveal
+            href={productUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-ink mt-[clamp(18px,2.2vw,32px)]"
+          >
             <span className="t-micro">{pairings.action}</span>
-          </button>
+          </a>
         </div>
       </div>
     </Section>
