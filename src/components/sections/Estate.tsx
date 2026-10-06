@@ -1,58 +1,45 @@
-import {useRef} from 'react';
-import {estate} from '../../lib/content';
-import {useParallax} from '../../hooks/useReveal';
+import {estate, productUrl} from '../../lib/content';
 import {Figure} from '../Figure';
 import {Lines, Section} from '../Section';
 
-/**
- * A full-bleed breath between the product and the footer. Padding collapses to
- * the frame so the photograph runs the whole width of the panel.
- */
 export function Estate() {
-  const image = useRef<HTMLDivElement>(null);
-  useParallax(image, {from: 0.1, to: -0.1});
-
   return (
     <Section
       id="estate"
       className="pt-[clamp(40px,9vh,120px)]"
       style={{paddingLeft: 'var(--frame)', paddingRight: 'var(--frame)'}}
     >
-      <div className="relative">
-        <div ref={image} className="will-change-transform">
+      <div className="relative overflow-hidden bg-oxblood px-[clamp(24px,5vw,80px)] py-[clamp(50px,10vh,120px)]">
+        <div className="grid grid-cols-1 items-center gap-[clamp(30px,5vw,80px)] lg:grid-cols-2">
+          <div>
+            <p data-reveal className="t-eyebrow text-parchment/85">
+              {estate.eyebrow}
+            </p>
+            <Lines
+              lines={estate.headline}
+              className="t-display mt-[0.12em] text-parchment"
+            />
+            <p data-reveal className="t-body mt-[clamp(12px,1.4vw,20px)] max-w-[46ch] text-parchment/80">
+              {estate.body}
+            </p>
+            <a
+              data-reveal
+              href={productUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-7 inline-flex border border-parchment/35 px-5 py-3 text-parchment transition-colors hover:bg-parchment hover:text-ink"
+            >
+              <span className="t-micro">Shop the Google Pen Red</span>
+            </a>
+          </div>
+
           <Figure
-            src="/img/vineyard.jpg"
-            alt="Block IX at dusk"
-            hint="Vineyard at dusk"
-            tone="dark"
-            className="aspect-[2/1] w-full"
+            src="/img/google-pen-red.svg"
+            alt="Google Pen Red"
+            hint="Google Pen Red"
+            fit="contain"
+            className="mx-auto aspect-[4/5] w-full max-w-[420px]"
           />
-        </div>
-
-        {/* Ink wash so the type holds whatever the photograph turns out to be. */}
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(to top, rgba(23,16,9,0.78) 0%, rgba(23,16,9,0.34) 40%, rgba(23,16,9,0) 74%)',
-          }}
-          aria-hidden="true"
-        />
-
-        <div
-          className="absolute bottom-0 left-0 right-0"
-          style={{padding: 'clamp(20px, 3.4vw, 60px)'}}
-        >
-          <p data-reveal className="t-eyebrow text-parchment/85">
-            {estate.eyebrow}
-          </p>
-          <Lines
-            lines={estate.headline}
-            className="t-display mt-[0.12em] text-parchment"
-          />
-          <p data-reveal className="t-body mt-[clamp(12px,1.4vw,20px)] max-w-[46ch] text-parchment/80">
-            {estate.body}
-          </p>
         </div>
       </div>
     </Section>
