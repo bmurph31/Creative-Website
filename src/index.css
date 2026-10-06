@@ -1,22 +1,22 @@
 @import 'tailwindcss';
 
 /* ---------------------------------------------------------------------------
-   Nocturne — Estate & Cellars
-   Oxblood field, parchment panel, ink type, one thread of antique gold.
+   Google Pen Red — Product Relaunch
+   Google-inspired blue frame, white panel, dark type, red and yellow accents.
    --------------------------------------------------------------------------- */
 
 @theme {
-  --color-oxblood: #4e0d1c;
-  --color-parchment: #f4eee3;
-  --color-parchment-shade: #e9dfcd;
-  --color-ink: #171009;
-  --color-ink-soft: #55483a;
-  --color-wine: #8e1b31;
-  --color-gold: #c2a15a;
+  --color-oxblood: #4285f4;
+  --color-parchment: #ffffff;
+  --color-parchment-shade: #f8f9fa;
+  --color-ink: #202124;
+  --color-ink-soft: #5f6368;
+  --color-wine: #ea4335;
+  --color-gold: #fbbc04;
 
   /* Display is condensed on purpose: mass per line is the whole effect. */
   --font-display: 'Anton', 'Haettenschweiler', 'Arial Narrow', sans-serif;
-  --font-logo: 'Bodoni Moda', 'Didot', 'Times New Roman', serif;
+  --font-logo: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-script: 'Cormorant Garamond', 'Garamond', serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
