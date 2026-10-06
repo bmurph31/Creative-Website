@@ -1,16 +1,12 @@
-import {specs, wine} from '../../lib/content';
+import {productUrl, specs, wine} from '../../lib/content';
+import {Figure} from '../Figure';
 import {Lines, Section} from '../Section';
 import {SpecCard} from '../SpecCard';
 
-/**
- * Text down the left, analysis down the right, the bottle pinned in the gap
- * between them. The columns are narrow on purpose — the empty middle third is
- * what the product occupies.
- */
 export function Wine() {
   return (
     <Section id="wine" className="flex min-h-screen items-center">
-      <div className="grid w-full grid-cols-1 gap-[clamp(28px,4vw,64px)] lg:grid-cols-12">
+      <div className="grid w-full grid-cols-1 items-center gap-[clamp(28px,4vw,64px)] lg:grid-cols-12">
         <div className="lg:col-span-4">
           <p data-reveal className="t-eyebrow text-ink/80">
             {wine.eyebrow}
@@ -22,13 +18,27 @@ export function Wine() {
             {wine.body}
           </p>
 
-          <button data-reveal type="button" className="btn-ink mt-[clamp(20px,2.4vw,34px)]">
+          <a
+            data-reveal
+            href={productUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-ink mt-[clamp(20px,2.4vw,34px)]"
+          >
             <span className="t-micro">{wine.action}</span>
-          </button>
+          </a>
         </div>
 
-        {/* The empty middle is the bottle's. */}
-        <div className="hidden lg:col-span-4 lg:block" aria-hidden="true" />
+        <div className="lg:col-span-4">
+          <Figure
+            src="/img/google-pen-red.svg"
+            alt="Google Pen Red"
+            hint="Google Pen Red product"
+            fit="contain"
+            shadow
+            className="mx-auto aspect-[4/5] w-full max-w-[340px]"
+          />
+        </div>
 
         <div className="lg:col-span-4">
           <SpecCard specs={specs} />
