@@ -25,18 +25,16 @@ export function Estate() {
             <a
               data-reveal
               href={productUrl}
-              target="_blank"
-              rel="noreferrer"
               className="mt-7 inline-flex border border-parchment/35 px-5 py-3 text-parchment transition-colors hover:bg-parchment hover:text-ink"
             >
-              <span className="t-micro">Shop the Google Pen Red</span>
+              <span className="t-micro">Explore the demo</span>
             </a>
           </div>
 
           <Figure
-            src="/img/google-pen-red.svg"
-            alt="Google Pen Red"
-            hint="Google Pen Red"
+            src="/img/golf-course.svg"
+            alt="Illustrated golf course"
+            hint="Illustrated golf course"
             fit="contain"
             className="mx-auto aspect-[4/5] w-full max-w-[420px]"
           />

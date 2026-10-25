@@ -1,7 +1,7 @@
-import {useCallback, useEffect, useLayoutEffect, useState} from 'react';
+import {useEffect, useLayoutEffect} from 'react';
 import {Chrome} from './components/Chrome';
 import {Frame} from './components/Frame';
-import {Preloader} from './components/Preloader';
+import {Demo} from './components/sections/Demo';
 import {Allocation} from './components/sections/Allocation';
 import {Estate} from './components/sections/Estate';
 import {Finish} from './components/sections/Finish';
@@ -18,7 +18,7 @@ import {ScrollTrigger, initMotion} from './lib/scroll';
 
 export default function App() {
   const reduced = useReducedMotion();
-  const [entered, setEntered] = useState(false);
+  const entered = true;
 
   useLayoutEffect(() => {
     probeTextures();
@@ -41,7 +41,7 @@ export default function App() {
     };
   }, [entered]);
 
-  const onDone = useCallback(() => setEntered(true), []);
+
 
   return (
     <>
@@ -53,13 +53,14 @@ export default function App() {
         <Wine />
         <Finish />
         <Notes />
+        <Demo />
         <Allocation />
         <Pairings />
         <Estate />
       </main>
 
       <Footer />
-      <Preloader onDone={onDone} />
+
     </>
   );
 }

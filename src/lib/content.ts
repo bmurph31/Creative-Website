@@ -1,149 +1,47 @@
-/**
- * Product relaunch copy for MKTG 1101.
- * The same template and motion system are preserved, but the wine story has
- * been repositioned around the Google Pen Red and its new target customer.
- */
-
-export const productUrl =
-  'https://shop.merch.google/product/google-pen-red-gmssgoar100899?itemListName=Search';
-
+/** Golf AI venture brief, adapted into the original creative website template. */
+export const productUrl = '#demo';
 export const brand = {
-  name: 'Google',
-  sub: 'Pen Red',
-  founded: 'WORK. CREATE. REPRESENT.',
-  cta: 'Shop the pen',
-  nav: ['The Pen', 'Why It Works', 'At Work', 'Benefits', 'Shop'],
+  name: 'Golf AI', sub: 'Your pocket caddy', founded: 'LESS GUESSWORK. MORE GOLF.',
+  cta: 'Try the demo',
+  nav: [
+    {label: 'The idea', href: '#wine'}, {label: 'Our mission', href: '#finish'},
+    {label: 'How it works', href: '#notes'}, {label: 'Try the demo', href: '#demo'},
+    {label: 'Membership', href: '#pairings'}, {label: 'Get in touch', href: '#footer'},
+  ],
 } as const;
-
-export const hero = {
-  giant: ['Google', 'Pen Red'],
-  cue: 'Scroll to discover',
-} as const;
-
+export const hero = {giant: ['Golf', 'AI'], cue: 'Explore the idea'} as const;
 export const wine = {
-  eyebrow: 'A small detail. A stronger brand.',
-  headline: ['Sign With', 'Google'],
-  body:
-    'The Google Pen Red turns an everyday writing tool into a simple expression of professional identity. Designed for Google employees, technology professionals, and dedicated Google fans, it brings the brand into meetings, notes, presentations, and important decisions.',
-  action: 'Get yours',
+  eyebrow: 'Meet your caddy in your pocket.', headline: ['One photo.', 'A clearer shot.'],
+  body: 'Golf AI is a proposed mobile app that starts with a quick photo of where your ball lies. The idea is simple: turn that moment of uncertainty into an understandable shot suggestion, so you can spend less time second-guessing and more time enjoying the round.',
+  action: 'Explore a sample shot',
 } as const;
-
-export type Spec = {
-  key: string;
-  label: string;
-  value: string;
-  note: string;
-};
-
+export type Spec = {key: string; label: string; value: string; note: string};
 export const specs: Spec[] = [
-  {
-    key: 'PRICE',
-    label: 'Google Merchandise Store',
-    value: '$2',
-    note: 'An affordable way to bring Google branding into your everyday professional routine.',
-  },
-  {
-    key: 'TIP',
-    label: 'Fine-point gel tip',
-    value: 'FINE',
-    note: 'Smooth, precise writing for meeting notes, signatures, and everyday work.',
-  },
-  {
-    key: 'INK',
-    label: 'Google Pen Red',
-    value: 'RED',
-    note: 'A bold red finish, Google branding, and red ink make it instantly recognizable.',
-  },
+  {key: 'CAPTURE', label: 'Start where your ball is', value: '01', note: 'Take a quick photo of the lie and surrounding terrain.'},
+  {key: 'CONTEXT', label: 'Add the details that matter', value: '02', note: 'Confirm distance and conditions. A photo alone cannot tell the whole story.'},
+  {key: 'COMMIT', label: 'Understand your next move', value: '03', note: 'Review a simple shot idea and the reasoning behind it.'},
 ];
-
 export const finish = {
-  giant: 'Make Your Mark',
-  videoCaption: ['Built for the workplace,', 'branded for Google.'],
-  lead:
-    'From quick ideas to major agreements, the tools professionals use become part of how they present themselves. The Google Pen Red gives employees and Google enthusiasts a simple way to keep the brand visible in everyday work.',
-  styleHeading: 'Professional Identity',
+  giant: 'Play with clarity', videoCaption: ['More confidence.', 'Less second-guessing.'],
+  lead: 'Everybody wants to be the best golfer they can be. But most of us do not have the knowledge, experience, or on-course support that professionals have.',
+  styleHeading: 'Knowledge for the rest of us.',
   styleBody: [
-    'A pen may be a small product, but it appears in meetings, presentations, conferences, workspaces, and conversations every day. That makes it a natural opportunity for brand representation.',
-    'Instead of positioning the Google Pen Red as ordinary merchandise, this relaunch presents it as a professional workplace accessory for people who are proud to represent Google and the technology industry.',
+    'Our mission is to bridge that gap and ease the stress everyday golfers feel when deciding what shot to hit. Golf AI aims to make practical guidance convenient, understandable, and affordable.',
+    'It is about a more enjoyable round, not a promise of a perfect score. Your ability, the conditions, and your own judgment still shape every shot.',
   ],
 } as const;
-
-export type Note = {
-  title: string;
-  body: string;
-  glyph: string;
-  tone: 'wine' | 'ink';
-};
-
+export type Note = {title: string; body: string; glyph: string; tone: 'wine' | 'ink'};
 export const notes: Note[] = [
-  {
-    title: 'Brand Pride',
-    body: 'Represent Google through an item you can actually use throughout the workday.',
-    glyph: 'G',
-    tone: 'wine',
-  },
-  {
-    title: 'Everyday Utility',
-    body: 'Useful for meetings, planning, note-taking, presentations, and signatures.',
-    glyph: '✦',
-    tone: 'wine',
-  },
-  {
-    title: 'Professional Detail',
-    body: 'A recognizable branded accessory that adds personality to a desk and professional routine.',
-    glyph: '✓',
-    tone: 'ink',
-  },
+  {title: 'Snap the lie', body: 'Open your phone and photograph the ball with enough of the surrounding ground to show the situation.', glyph: '01', tone: 'wine'},
+  {title: 'Set the scene', body: 'Add distance, obstacles, and conditions. The planned app combines your photo with the context you provide.', glyph: '02', tone: 'wine'},
+  {title: 'Choose your shot', body: 'Get an easy-to-understand suggestion. See the thinking, choose what suits your game, and take your swing.', glyph: '03', tone: 'ink'},
 ];
-
-export type Format = {
-  id: string;
-  caption: string;
-  detail: string;
-  live?: boolean;
-  src?: string;
-  h: number;
-};
-
-export const allocation = {
-  eyebrow: 'Made for:',
-  giant: 'Everyday',
-  giantSub: 'Google',
-  formats: [
-    {id: 'meeting', caption: 'Meetings', detail: 'Take notes', src: '/img/google-pen-red.svg', h: 0.9},
-    {id: 'desk', caption: 'Your desk', detail: 'Show your brand', src: '/img/google-pen-red.svg', h: 0.82},
-    {id: 'signature', caption: 'Signatures', detail: 'Make your mark', src: '/img/google-pen-red.svg', h: 0.96},
-    {id: 'conference', caption: 'Conferences', detail: 'Represent Google', src: '/img/google-pen-red.svg', h: 0.84},
-    {id: 'ideas', caption: 'Big ideas', detail: 'Write them down', src: '/img/google-pen-red.svg', h: 0.88},
-  ] as Format[],
-} as const;
-
 export const pairings = {
-  eyebrow: 'More than merchandise',
-  headline: ['Put Google', 'In Your Hand'],
-  body:
-    'Google employees and technology professionals already represent the brand through the work they do. The Google Pen Red extends that identity to an everyday object — making it ideal for the office, meetings, events, and professional conversations.',
-  action: 'Shop Google Pen Red',
+  eyebrow: 'A small part of your golf budget.', headline: ['Keep your', 'caddy close.'],
+  body: 'Golf AI is designed around an affordable recurring subscription for golfers who play often. The goal is a useful companion you return to each round, with enough everyday value to earn your renewal. Pricing and launch availability are still being developed.',
+  action: 'Share your interest',
 } as const;
-
 export const estate = {
-  eyebrow: 'For people who build the future',
-  headline: ['Think Bold.', 'Write Google.'],
-  body:
-    'Designed for employees, technology professionals, and dedicated Google fans who value innovation, recognizable design, and the opportunity to represent the brands they believe in.',
-} as const;
-
-export const footer = {
-  columns: [
-    {title: 'Product', links: ['Google Pen Red', 'Fine-point gel tip', 'Soft-touch finish', 'Red ink']},
-    {title: 'Use It', links: ['Meetings', 'Signatures', 'Notes', 'Conferences']},
-    {title: 'Google', links: ['Brand pride', 'Professional identity', 'Technology', 'Merchandise Store']},
-  ],
-  newsletter: {
-    title: 'Make your mark',
-    body: 'Bring Google branding into your everyday work with a simple professional accessory.',
-    placeholder: 'Your email',
-    action: 'Stay connected',
-  },
-  legal: 'Google Pen Red promotional concept created for a Fairfield University marketing course project.',
+  eyebrow: 'Built around an active life.', headline: ['Your game.', 'Your next chapter.'],
+  body: 'From weekend rounds to a regular tee time, Golf AI is for recreational golfers who want to make more informed decisions without turning every shot into a lesson. The initial venture focus is North America and Europe, welcoming adult golfers of all genders.',
 } as const;

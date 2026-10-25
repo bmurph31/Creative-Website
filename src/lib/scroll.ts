@@ -102,6 +102,7 @@ export function initMotion(reduced: boolean) {
     window.addEventListener('scroll', onNativeScroll, {passive: true});
   } else {
     lenis = new Lenis({
+      anchors: {offset: -100},
       duration: 1.15,
       // Expo-out: catches the wheel hard, releases slowly. This single curve is
       // most of why the whole page feels heavy and expensive rather than floaty.

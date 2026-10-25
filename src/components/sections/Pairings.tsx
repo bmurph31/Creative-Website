@@ -1,5 +1,5 @@
 import {useRef} from 'react';
-import {pairings, productUrl} from '../../lib/content';
+import {pairings} from '../../lib/content';
 import {useParallax} from '../../hooks/useReveal';
 import {Figure} from '../Figure';
 import {Lines, Section} from '../Section';
@@ -13,9 +13,9 @@ export function Pairings() {
       <div className="grid w-full grid-cols-1 items-center gap-[clamp(24px,4vw,70px)] lg:grid-cols-12">
         <div ref={photo} className="lg:col-span-6">
           <Figure
-            src="/img/google-pen-red.svg"
-            alt="Google Pen Red"
-            hint="Google Pen Red"
+            src="/img/golf-phone.svg"
+            alt="Golf AI app concept"
+            hint="Golf AI app concept"
             fit="contain"
             shadow
             className="mx-auto aspect-[4/3] w-full max-w-[520px]"
@@ -38,9 +38,7 @@ export function Pairings() {
 
           <a
             data-reveal
-            href={productUrl}
-            target="_blank"
-            rel="noreferrer"
+            href="#footer"
             className="btn-ink mt-[clamp(18px,2.2vw,32px)]"
           >
             <span className="t-micro">{pairings.action}</span>

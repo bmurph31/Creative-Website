@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 760" fill="none">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#acc58b"/><stop offset="1" stop-color="#355d3d"/></linearGradient><radialGradient id="b"><stop stop-color="white"/><stop offset="1" stop-color="#d6ddc7"/></radialGradient></defs>
+<rect x="27" y="8" width="376" height="740" rx="57" fill="#102c24"/>
+<rect x="34" y="15" width="362" height="726" rx="51" stroke="#63836c" stroke-width="2"/>
+<rect x="43" y="26" width="344" height="703" rx="41" fill="#f3f2e9"/>
+<rect x="157" y="36" width="116" height="23" rx="12" fill="#102c24"/>
+<text x="67" y="98" fill="#183d2c" font-family="Arial,sans-serif" font-size="23" font-weight="bold">GOLF AI</text>
+<text x="278" y="96" fill="#49624c" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">CONCEPT</text>
+<rect x="60" y="121" width="310" height="282" rx="20" fill="url(#bg)"/>
+<path d="M60 337Q193 215 370 180V281Q171 315 60 392Z" fill="#b0c98c"/>
+<path d="M79 372C206 220 296 252 324 187" stroke="#f4f4d9" stroke-width="3" stroke-dasharray="6 8"/>
+<circle cx="177" cy="326" r="22" fill="url(#b)"/>
+<g stroke="#e6edce" stroke-width="2"><path d="M142 288V275H158M199 275H214V290M214 351V364H199M158 364H142V350"/></g>
+<rect x="76" y="138" width="109" height="25" rx="12" fill="#183d2c"/>
+<text x="88" y="155" fill="#eef4d3" font-family="Arial,sans-serif" font-size="10" letter-spacing="1">SAMPLE PREVIEW</text>
+<text x="65" y="440" fill="#65715e" font-family="Arial,sans-serif" font-size="12" letter-spacing="1">FAIRWAY · 120 YARDS</text>
+<text x="65" y="480" fill="#183d2c" font-family="Arial,sans-serif" font-size="28" font-weight="bold">Play to the middle.</text>
+<text x="65" y="514" fill="#4e5d4d" font-family="Arial,sans-serif" font-size="15">Pick a club that fits your carry.</text>
+<text x="65" y="538" fill="#4e5d4d" font-family="Arial,sans-serif" font-size="15">Give yourself a generous target.</text>
+<path d="M65 565H365" stroke="#ccd2be"/>
+<text x="65" y="593" fill="#65715e" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">CHECK WIND · SLOPE · HAZARDS</text>
+<rect x="65" y="617" width="300" height="51" rx="25" fill="#244e35"/>
+<text x="139" y="649" fill="#f1f4dd" font-family="Arial,sans-serif" font-size="14">YOUR NEXT SHOT ↗</text>
+<text x="105" y="697" fill="#697363" font-family="Arial,sans-serif" font-size="11">Illustrative app screen · Not live analysis</text>
+<rect x="164" y="713" width="102" height="4" rx="2" fill="#1a3e2b"/>
+</svg>

@@ -1,18 +1,18 @@
 @import 'tailwindcss';
 
 /* ---------------------------------------------------------------------------
-   Google Pen Red — Product Relaunch
-   Google-inspired blue frame, white panel, dark type, red and yellow accents.
+   Golf AI — Marketing Venture
+   Forest frame, warm ivory panel, and golf-green accents.
    --------------------------------------------------------------------------- */
 
 @theme {
-  --color-oxblood: #4285f4;
-  --color-parchment: #ffffff;
-  --color-parchment-shade: #f8f9fa;
-  --color-ink: #202124;
-  --color-ink-soft: #5f6368;
-  --color-wine: #ea4335;
-  --color-gold: #fbbc04;
+  --color-oxblood: #153f32;
+  --color-parchment: #f4f2e9;
+  --color-parchment-shade: #e8eddf;
+  --color-ink: #162d24;
+  --color-ink-soft: #536358;
+  --color-wine: #2f6544;
+  --color-gold: #d4e695;
 
   /* Display is condensed on purpose: mass per line is the whole effect. */
   --font-display: 'Anton', 'Haettenschweiler', 'Arial Narrow', sans-serif;
@@ -163,7 +163,7 @@ body {
   .t-micro {
     font-family: var(--font-sans);
     font-weight: 500;
-    font-size: 0.5625rem;
+    font-size: 0.6875rem;
     line-height: 1.4;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -171,8 +171,8 @@ body {
 
   .t-body {
     font-family: var(--font-sans);
-    font-weight: 300;
-    font-size: clamp(0.75rem, 0.86vw, 0.84rem);
+    font-weight: 400;
+    font-size: clamp(1rem, 1.08vw, 1.125rem);
     line-height: 1.72;
     letter-spacing: 0.004em;
     color: var(--color-ink);
@@ -181,7 +181,7 @@ body {
   .t-body-xs {
     font-family: var(--font-sans);
     font-weight: 300;
-    font-size: 0.6875rem;
+    font-size: 0.875rem;
     line-height: 1.62;
     letter-spacing: 0.006em;
     color: var(--color-ink-soft);
@@ -451,4 +451,127 @@ body {
   [data-motion='on'] .line-mask > span {
     transform: none;
   }
+}
+
+/* Golf AI: venture-specific layout, layered over the retained template. */
+section[id], footer[id] { scroll-margin-top: 110px; }
+.golf-header { position: fixed; z-index: 70; top: var(--frame); left: var(--frame); right: var(--frame); display: flex; justify-content: space-between; align-items: center; padding: 18px clamp(18px,3.2vw,50px); background: rgba(244,242,233,.96); border-bottom: 1px solid #153f3226; backdrop-filter: blur(12px); }
+.golf-wordmark { font-size: 25px; line-height: 1; font-weight: 800; letter-spacing: -.06em; }
+.golf-wordmark > span { font-weight: 400; margin-left: 4px; color: #426448; }
+.golf-wordmark small { display:block; font-size: 8px; letter-spacing: .16em; margin-top: 8px; font-weight: 500; }
+.header-actions { display:flex; gap:24px; align-items:center; }
+.menu-toggle { cursor:pointer; font-size:13px; padding:12px 0 12px 12px; min-height:44px; }
+#golf-menu { position:absolute; top:100%; right:0; width:min(500px,100%); background:#153f32; color:#f4f2e9; padding:22px 32px; box-shadow:0 18px 36px #132b2725; max-height:calc(100dvh - 110px); overflow-y:auto; }
+#golf-menu a { display:flex; align-items:center; gap:20px; padding:15px 0; border-bottom:1px solid #f4f2e92c; font-size:22px; }
+#golf-menu a:hover { color:#d4e695; }
+#golf-menu a span { font-size:11px; color:#d4e695; }
+#golf-menu a b { margin-left:auto; font-weight:400; }
+.skip-link { position:fixed; top:-100px; left:25px; z-index:110; padding:14px; background:#d4e695; }
+.skip-link:focus { top:20px; }
+.golf-hero { display:grid; grid-template-columns:1.1fr 1fr; gap:3vw; align-items:center; padding-top:150px; padding-bottom:40px; min-height:100svh; }
+.hero-kicker { color:#536358; margin-bottom:26px; }
+.hero-copy h1 { font-family:var(--font-display); font-size:clamp(60px,8.8vw,148px); line-height:.96; letter-spacing:-.015em; }
+.hero-copy h1 span { color:#2f6544; }
+.hero-intro { font-size:clamp(17px,1.5vw,23px); line-height:1.55; margin-top:28px; }
+.hero-buttons { display:flex; align-items:center; flex-wrap:wrap; gap:24px; margin-top:28px; font-size:13px; }
+.hero-note { max-width:40ch; font-size:12px; color:#536358; line-height:1.6; margin-top:22px; }
+.hero-art { position:relative; align-self:stretch; min-height:450px; max-height:710px; }
+.hero-art img { width:100%; height:100%; object-fit:cover; border-radius:140px 140px 8px 8px; }
+.hero-caption { position:absolute; bottom:24px; left:25px; right:25px; display:flex; justify-content:space-between; color:#f4f2e9; font-size:9px; letter-spacing:.12em; gap:16px; }
+.hero-bottom { grid-column:1/-1; display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; margin-top:18px; border-top:1px solid #153f3230; padding-top:20px; font-size:10px; letter-spacing:.1em; color:#536358; }
+#wine, #finish, #notes, #pairings { padding-top:90px; padding-bottom:90px; min-height:auto; }
+#finish .t-giant { color:#2f6544; }
+#finish { border-top:1px solid #153f3226; }
+.audience-section { padding-top:100px; padding-bottom:100px; }
+.audience-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; margin-top:45px; }
+.audience-grid > p { max-width:45ch; }
+.audience-grid dl > div { padding:18px 0; border-top:1px solid #153f3230; }
+.audience-grid dt { font-size:10px; letter-spacing:.12em; color:#536358; }
+.audience-grid dd { margin-top:8px; font-size:18px; line-height:1.5; }
+.demo-section { padding-top:100px; padding-bottom:100px; background:#e6ebdc; margin:0 var(--frame); }
+.demo-heading { display:flex; align-items:end; justify-content:space-between; gap:40px; }
+.demo-disclosure { max-width:32ch; font-size:13px; line-height:1.7; color:#536358; }
+.demo-disclosure strong { display:block; font-size:10px; letter-spacing:.14em; color:#2f6544; margin-bottom:8px; }
+.demo-layout { display:grid; grid-template-columns:1.1fr 1fr; margin-top:45px; gap:30px; align-items:stretch; }
+.demo-inputs { min-width:0; background:#f4f2e9; padding:26px; }
+.demo-picture { position:relative; height:230px; margin-bottom:20px; overflow:hidden; }
+.demo-picture img { width:100%; height:100%; object-fit:cover; object-position:50% 75%; }
+.demo-picture span { position:absolute; top:12px; left:12px; background:#153f32; color:#f4f2e9; font-size:9px; letter-spacing:.1em; padding:7px 10px; }
+.upload-label { display:block; font-size:14px; margin-bottom:10px; }
+#lie-photo { font-size:12px; width:100%; }
+#lie-photo::file-selector-button { background:#e1e7d3; color:#183d2c; padding:10px; border:1px solid #b2bfa8; margin-right:10px; cursor:pointer; }
+.input-note, .input-error { font-size:11px; line-height:1.7; margin-top:8px; color:#536358; }
+.input-error { color:#9d3025; }
+.demo-inputs fieldset { margin-top:25px; border:0; }
+.demo-inputs legend, .distance-control label { font-size:12px; display:block; width:100%; }
+.lie-options { display:flex; gap:8px; margin-top:12px; }
+.lie-options button { flex:1; padding:12px 8px; border:1px solid #a4b39b; cursor:pointer; font-size:13px; transition:background .2s; }
+.lie-options button[aria-pressed=true] { background:#244e35; color:#f4f2e9; border-color:#244e35; }
+.distance-control { margin-top:24px; }
+.distance-control label strong { float:right; font-weight:500; }
+.distance-control input { width:100%; accent-color:#2f6544; margin-top:16px; min-height:24px; }
+.distance-control > div { display:flex; justify-content:space-between; font-size:10px; color:#536358; }
+.demo-submit { margin-top:26px; font-size:13px; }
+.reset-demo { display:inline-block; margin-left:18px; padding:12px 0; text-decoration:underline; font-size:12px; cursor:pointer; }
+.demo-output { background:#153f32; color:#f4f2e9; padding:32px; min-width:0; }
+.output-top { display:flex; justify-content:space-between; align-items:center; font-size:10px; letter-spacing:.1em; border-bottom:1px solid #f4f2e940; padding-bottom:20px; gap:10px; }
+.demo-pill { border:1px solid #d4e69588; color:#d4e695; border-radius:20px; padding:5px 10px; }
+.demo-empty { padding:65px 0; }
+.demo-empty > span { font-size:75px; color:#d4e695; }
+.demo-output h3 { font-family:var(--font-display); font-size:clamp(30px,3.6vw,54px); line-height:1.1; text-transform:uppercase; }
+.demo-empty p { max-width:32ch; font-size:15px; line-height:1.7; margin-top:22px; color:#d5decd; }
+.shot-context { font-size:11px; letter-spacing:.1em; margin:38px 0 18px; color:#d4e695; }
+.shot-advice { font-size:16px; line-height:1.8; margin-top:26px; color:#e6e9dc; }
+.shot-check { padding-top:24px; margin-top:28px; border-top:1px solid #f4f2e940; }
+.shot-check strong { color:#d4e695; font-size:13px; font-weight:500; }
+.shot-check p { margin-top:10px; font-size:13px; line-height:1.7; color:#d5decd; }
+.output-footnote { font-size:11px; line-height:1.6; color:#b7c6b6; margin-top:28px; }
+.faq-section { padding-top:90px; padding-bottom:90px; }
+.faq-list { margin-top:40px; max-width:960px; }
+.faq-list > div { border-top:1px solid #153f3238; }
+.faq-list button { display:flex; width:100%; text-align:left; justify-content:space-between; padding:24px 0; gap:20px; cursor:pointer; font-size:clamp(16px,1.5vw,20px); }
+.faq-list button span { color:#2f6544; }
+.faq-list p { font-size:15px; line-height:1.8; padding:0 30px 24px 0; max-width:72ch; color:#536358; }
+.golf-footer { position:relative; z-index:30; background:#153f32; color:#f4f2e9; margin:0 var(--frame); padding:75px clamp(30px,7vw,100px) 30px; display:grid; grid-template-columns:2fr 1fr; gap:40px; }
+.golf-footer h2 { font-family:var(--font-display); font-size:clamp(42px,6vw,86px); line-height:1; margin:20px 0; }
+.golf-footer p:not(.t-micro) { max-width:46ch; line-height:1.7; color:#d1dbc8; font-size:15px; }
+.footer-contact { display:inline-block; padding:14px 24px; color:#153f32; background:#d4e695; margin:24px 0 12px; }
+.golf-footer .contact-address { font-size:12px!important; overflow-wrap:anywhere; }
+.golf-footer nav { display:flex; flex-direction:column; justify-content:center; align-items:start; gap:16px; font-size:14px; }
+.golf-footer nav a { padding:5px 0; }
+.golf-footer nav a:hover { text-decoration:underline; }
+.footer-legal { grid-column:1/-1; border-top:1px solid #f4f2e933; padding-top:24px; font-size:10px; color:#b6c6b5; display:flex; gap:16px; flex-wrap:wrap; justify-content:space-between; }
+:where(a, button, input):focus-visible { outline:3px solid #809a48; outline-offset:4px; }
+@media(max-width:900px) {
+ .golf-hero { grid-template-columns:1fr; padding-top:140px; }
+ .hero-copy h1 { font-size:clamp(58px,12vw,110px); }
+ .hero-art { min-height:360px; height:440px; margin-top:24px; }
+ .hero-art img { border-radius:80px 80px 6px 6px; object-position:center 68%; }
+ .demo-heading { flex-direction:column; align-items:start; gap:24px; }
+ .demo-disclosure { max-width:50ch; }
+ .demo-layout { grid-template-columns:1fr; }
+ .audience-grid { grid-template-columns:1fr; gap:20px; }
+ .golf-footer { grid-template-columns:1fr; }
+}
+@media(max-width:520px) {
+ :root { --rail:12px; --gutter:20px; }
+ .golf-header { padding:14px; }
+ .golf-wordmark { font-size:21px; }
+ .golf-wordmark small { font-size:6px; }
+ .header-actions { gap:12px; }
+ .header-actions .btn-wine { padding:12px; }
+ .header-actions .t-micro { font-size:9px; letter-spacing:.07em; }
+ .menu-toggle { font-size:12px; padding-left:0; }
+ .hero-copy h1 { font-size:clamp(48px,12vw,64px); }
+ .hero-kicker { font-size:9px; }
+ .hero-buttons { gap:18px; }
+ .hero-art { height:360px; }
+ .hero-bottom { font-size:8px; }
+ .demo-section { padding-top:65px; padding-bottom:65px; }
+ .demo-inputs,.demo-output { padding:18px; }
+ .demo-picture { height:190px; }
+ .demo-submit { font-size:12px; padding:15px; }
+ .reset-demo { margin-left:12px; }
+ .golf-footer { padding:50px 22px 25px; }
+ .t-display { font-size:clamp(36px,10vw,52px); }
 }

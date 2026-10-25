@@ -21,8 +21,6 @@ export function Wine() {
           <a
             data-reveal
             href={productUrl}
-            target="_blank"
-            rel="noreferrer"
             className="btn-ink mt-[clamp(20px,2.4vw,34px)]"
           >
             <span className="t-micro">{wine.action}</span>
@@ -31,9 +29,9 @@ export function Wine() {
 
         <div className="lg:col-span-4">
           <Figure
-            src="/img/google-pen-red.svg"
-            alt="Google Pen Red"
-            hint="Google Pen Red product"
+            src="/img/golf-phone.svg"
+            alt="Golf AI concept app screen"
+            hint="Golf AI concept app screen product"
             fit="contain"
             shadow
             className="mx-auto aspect-[4/5] w-full max-w-[340px]"

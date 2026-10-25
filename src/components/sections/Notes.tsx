@@ -4,9 +4,9 @@ import {Section} from '../Section';
 export function Notes() {
   return (
     <Section id="notes" className="flex min-h-[80vh] flex-col justify-center py-[clamp(56px,9vh,110px)]">
-      <p data-reveal className="t-eyebrow text-ink/75">Why it works</p>
+      <p data-reveal className="t-eyebrow text-ink/75">From uncertainty to a plan</p>
       <h2 data-reveal className="t-display mt-[0.12em] text-ink">
-        Small Tool. <span className="text-wine">Visible Brand.</span>
+        THREE STEPS. <span className="text-wine">ONE NEXT SHOT.</span>
       </h2>
 
       <div className="mt-[clamp(28px,5vw,72px)] grid grid-cols-1 gap-[clamp(16px,2vw,28px)] md:grid-cols-3">

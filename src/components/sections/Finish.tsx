@@ -16,9 +16,9 @@ export function Finish() {
       <div className="mt-[clamp(26px,5vh,72px)] grid w-full grid-cols-1 items-center gap-[clamp(28px,4vw,64px)] lg:grid-cols-12">
         <div ref={product} className="lg:col-span-4">
           <Figure
-            src="/img/google-pen-red.svg"
-            alt="Google Pen Red shown as a professional workplace accessory"
-            hint="Google Pen Red"
+            src="/img/golf-course.svg"
+            alt="Illustrated course showing a ball and a planned shot toward the green"
+            hint="Golf course illustration"
             fit="contain"
             shadow
             className="mx-auto aspect-[4/5] w-full max-w-[320px]"
